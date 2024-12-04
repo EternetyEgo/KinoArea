@@ -1,0 +1,202 @@
+.films_films{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+  .text {
+    font-size: 45px;
+    color: white;
+    font-weight: 900;
+    margin-top: 70px;
+    border-bottom: 4px solid red;
+    width: 170px;
+    margin-bottom: 20px;
+  }
+  .star {
+    display: flex;
+    align-items: center;
+    color: yellow;
+    font-size: 13px;
+  }
+  
+  .films {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .film {
+    margin-top: 70px;
+    column-gap: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: none;
+    position: absolute;
+  }
+  .card {
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .card:hover {
+    transform: translateY(-15px);
+    .btn {
+      display: block;
+    }
+    img {
+      filter: brightness(30%);
+    }
+  }
+  .card img {
+    width: 242px;
+    cursor: pointer;
+  }
+  .card .texts {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+  }
+  .card h4 {
+    color: white;
+    font-size: 18px;
+  }
+
+  .card h5 {
+    color: #f6b80f;
+    font-size: 14px;
+  }
+  .btn_parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn_parent button {
+    width: 20%;
+    margin-top: 40px;
+    height: 40px;
+  }
+  .button {
+    height: 40px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 0px 15px;
+    background-color: rgb(66, 66, 66);
+    border-radius: 10px;
+    color: white;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transition-duration: 0.2s;
+  }
+  .button .textk {
+    color: white;
+  }
+  .link {
+    text-decoration: none !important;
+  }
+  .bell {
+    width: 13px;
+  }
+
+  .bell path {
+    fill: rgb(0, 206, 62);
+  }
+
+  .arrow {
+    position: absolute;
+    right: 0;
+    width: 30px;
+    height: 100%;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button:hover {
+    background-color: rgb(77, 77, 77);
+    transition-duration: 0.2s;
+  }
+
+  .button:hover .arrow {
+    animation: slide-right 0.6s ease-out both;
+  }
+
+  @media (max-width: 450px) {
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .film {
+      gap: 18px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 850px) {
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn_parent button {
+      width: 40% !important;
+      margin-top: 40px;
+      height: 40px;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    .film {
+      justify-content: space-evenly !important;
+      gap: 30px;
+    }
+    .films {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .film {
+      column-gap: 20px;
+    }
+  }
+
+  @keyframes slide-right {
+    0% {
+      transform: translateX(-10px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .button:active {
+    transform: translate(1px, 1px);
+    transition-duration: 0.2s;
+  }
+

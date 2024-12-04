@@ -1,0 +1,42 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 200px;
+  margin-top: 40px;
+  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+  filter: drop-shadow(0 0 6px currentColor);
+  width: 100% !important;
+
+  .logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .logo {
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .logo_des {
+    transition: all 0.3s ease;
+  }
+  .logo_des:hover {
+    transform: rotate(45deg);
+  }
+
+  .logo:hover {
+    box-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 5px #0073e6, 0 0 10px #0073e6,
+      0 0 5px #0073e6, 0 0 5px #0073e6, 0 0 19px #0073e6;
+  }
+}
+@media(max-width: 450px){
+  .footer{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 30px;
+    flex-direction: column !important;
+  }
+}
